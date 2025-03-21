@@ -1,0 +1,16 @@
+apiVersion: fluentbit.fluent.io/v1alpha2
+kind: ClusterOutput
+metadata:
+  name: deathstar-output
+  labels:
+    fluentbit.fluent.io/enabled: "true"
+    fluentbit.fluent.io/component: logging
+spec:
+  matchRegex: deathstar.*
+  es:
+    host: "192.168.7.253"
+    port: 9200
+    generateID: true
+    logstashFormat: true
+    logstashPrefix: deathstar
+    suppressTypeName: "On"
