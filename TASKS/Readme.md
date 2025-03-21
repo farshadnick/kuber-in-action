@@ -1,4 +1,4 @@
-## Related Scenarios
+## Main Scenarios
 ----------------------
 
 1. **Deploy the 2048 app on Kubernetes**  
@@ -44,7 +44,7 @@
    - Runs every 10 minutes to check Redis functionality and push the results to Prometheus.  
 16. **Bring up a Loadbalancer**  
    - Your 2048 Service must be able with single ip 
-## Unrelated Scenarios
+## Additional Scenarios
 ------------------------
 
 1. The application must only be deployed on `node3`, and no other applications should be scheduled on this node.
