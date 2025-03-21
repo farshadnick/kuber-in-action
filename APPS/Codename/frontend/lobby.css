@@ -1,0 +1,217 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Roboto', verdana, sans-serif;
+}
+
+#topbar {
+  padding: 1em;
+}
+
+#topbar a {
+  color: black;
+  text-decoration: none;
+}
+
+.dark-mode #topbar a {
+  color: #888;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-family: 'Courier New', monospace;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Courier New', monospace;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+p.intro {
+  line-height: 1.5em;
+  margin-bottom: 3em;
+  text-align: justify;
+  font-family: verdana;
+  font-size: 0.9em;
+}
+
+#available-games {
+  width: 500px;
+  margin: 0 auto;
+}
+
+#available-games ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#new-game {
+  margin: 0 auto 100px auto;
+}
+
+#new-game input#game-name {
+  height: 50px;
+  width: 350px;
+  padding: 5px 10px;
+  font-size: 1.3em;
+  border: 1px #ddd solid;
+  border-right: none;
+  letter-spacing: 0.1em;
+}
+
+#new-game button {
+  height: 62px;
+  width: 120px;
+  padding: 5px 10px;
+  background: #e1f4d0;
+  border: 1px #ddd solid;
+  font-size: 1em;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+#new-game-options {
+  margin-top: 1em;
+}
+
+.language-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.language-group input {
+  margin-right: 0.4rem;
+}
+
+.btn-custom-word-set {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: nowrap;
+  border-top: 1px #ddd solid;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+}
+
+.btn-custom-word-set .label {
+  flex-grow: 1;
+}
+
+#new-game-options textarea {
+  width: 100%;
+  height: 25em;
+  margin: 0.5em 0;
+  font-size: 0.6em;
+  border: 1px #ddd solid;
+  font-family: 'verdana', sans-serif;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+
+#wordsets {
+  margin-top: 1em;
+}
+#wordsets .instruction {
+  font-size: 0.8em;
+  font-family: verdana;
+  color: #666;
+}
+
+.btn-wordsettoggle {
+  cursor: pointer;
+  border-radius: 0.25em;
+  border: 1px #bbb solid;
+  padding: 0.5em;
+  display: inline-block;
+  margin: 0.25em;
+  font-family: 'verdana', sans-serif;
+  font-size: 0.7em;
+  user-select: none;
+}
+.btn-wordsettoggle:hover {
+  border: 1px #999 solid;
+}
+
+#wordsets .selected {
+  background: #e1f4d0;
+  border: 1px #a0c12a solid;
+}
+
+.btn-custom-word-set .symbol {
+  width: 1em;
+  display: inline-block;
+}
+.warning {
+  color: #d13030;
+  margin-top: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.9em;
+}
+.btn-custom-word-set:hover .label {
+  color: #333;
+}
+
+.dropdown-label {
+  display: flex;
+}
+
+#banner {
+  width: 500px;
+  margin: 0 auto 3em auto;
+  font-size: 0.9em;
+  border-radius: 0.5em;
+  padding: 1em;
+  background: #e1f4d0;
+}
+
+#banner a {
+  color: #000;
+  font-weight: bold;
+}
+
+#timer-settings {
+  margin: 2em 0 2em 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+#timer-settings .toggle-set {
+  margin-left: 0;
+  margin-right: 0;
+}
+#timer-settings .label {
+  font-size: 0.9em;
+}
+#timer-settings .toggle-state {
+  font-size: 0.8em;
+}
+
+#timer-duration {
+  font-family: verdana;
+  font-size: 0.9em;
+  line-height: 1.5em;
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#timer-duration div {
+  display: flex;
+  align-items: center;
+}
+#timer-duration span {
+  margin-right: 1.5em;
+}
+#timer-duration label {
+  margin-right: 0.6em;
+}
+#timer-duration input {
+  font-size: 1.3em;
+  max-width: 50px;
+}
