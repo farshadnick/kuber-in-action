@@ -42,10 +42,14 @@
 
 15. **Set up a monitoring script**  
    - Runs every 10 minutes to check Redis functionality and push the results to Prometheus.  
-
+16. **Bring up a Loadbalancer**  
+   - Your 2048 Service must be able with single ip 
 ## Unrelated Scenarios
 ------------------------
 
 1. The application must only be deployed on `node3`, and no other applications should be scheduled on this node.
-
 2. Create an admin kubeconfig for the user `packops`.
+3. Run Kubescape in order to Run Security Audit Check
+4. Enable Kubernetes Audit Log
+5. monitor pod crash with kwatch
+6. 
