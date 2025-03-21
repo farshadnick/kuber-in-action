@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shared-packops-redis
+  labels:
+    app: shared-packops-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shared-packops-redis
+  template:
+    metadata:
+      labels:
+        app: shared-packops-redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:6
+          imagePullPolicy: IfNotPresent
+          command:
+            - redis-server
+            - /redis-master/redis.conf
+          ports:
+            - containerPort: 6379
+              name: redis-port
+              protocol: TCP
+          env:
+            - name: MASTER
+              value: "true"
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+          volumeMounts:
+            - name: redis-config
+              mountPath: /redis-master/redis.conf
+              subPath: redis.conf
+      volumes:
+        - name: redis-config
+          configMap:
+            name: shared-packops-redis-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: shared-packops-redis-svc
+  labels:
+    app: shared-packops-redis
+spec:
+  ports:
+    - name: redis-port
+      port: 6379
+      protocol: TCP
+      targetPort: 6379
+  selector:
+    app: shared-packops-redis
+  type: ClusterIP
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: shared-packops-redis-config
+data:
+  redis.conf: |-
+    maxmemory 800mb
+    maxmemory-policy allkeys-lru
+    appendonly no
+    requirepass PASSWORD1234P
