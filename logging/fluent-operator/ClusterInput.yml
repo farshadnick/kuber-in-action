@@ -1,0 +1,20 @@
+apiVersion: fluentbit.fluent.io/v1alpha2
+kind: ClusterInput
+metadata:
+  name: deathstar
+  labels:
+    fluentbit.fluent.io/enabled: "true"
+    fluentbit.fluent.io/component: logging
+spec:
+  alias: deathstar.tail
+  tail:
+    tag: deathstar.*
+    path: /var/log/containers/deathstar-*.log
+    parser: cri
+    refreshIntervalSeconds: 2
+    memBufLimit: "128MB"
+    bufferMaxSize: "256MB"
+    bufferChunkSize: "64MB"
+    skipLongLines: false
+    db: /fluent-bit/tail/deathstar_pos.db
+    dbSync: Normal
