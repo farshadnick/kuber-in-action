@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: esi
+  labels:
+    serviceMonitorSelector: prometheus
+    prometheus: test
+spec:
+  selector:
+    matchLabels:
+      label: svc-packops
+  namespaceSelector:
+    matchNames:
+      - default
+  endpoints:
+  - interval: 10s
+    port: metrics
+    path: /
