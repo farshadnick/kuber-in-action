@@ -1,7 +1,7 @@
 ## Main Scenarios
 ----------------------
 
-1. **Deploy the 2048 app on Kubernetes**  
+1. **Deploy the Codename app on Kubernetes**  
    1.1. Ensure your app has both Readiness and Liveness probes.  
 
 2. **Make your app accessible on the internet**  
@@ -21,7 +21,7 @@
    7.1. The CI/CD pipeline must include a code quality check for each stage.  
    7.2. Deploy the app using the Helm Chart.  
 
-8. **Deploy a new version of the 2048 app**  
+8. **Deploy a new version of the Codename app**  
    8.1. Route 80% of the traffic to version 1 and 20% to the new version.  
    8.2. Implement shadowing.  
 
@@ -43,7 +43,7 @@
 15. **Set up a monitoring script**  
    - Runs every 10 minutes to check Redis functionality and push the results to Prometheus.  
 16. **Bring up a Loadbalancer**  
-   - Your 2048 Service must be able with single ip 
+   - Your Codename Service must be able with single ip 
 ## Additional Scenarios
 ------------------------
 
