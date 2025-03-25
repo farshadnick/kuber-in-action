@@ -1,4 +1,3 @@
-#kubectl autoscale deployment nginx-deployment --cpu-percent=50 --min=1 --max=10
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
@@ -17,3 +16,13 @@ spec:
       target:
         type: Utilization
         averageUtilization: 50
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 60  # Reduce cooldown time to 1 min
+      policies:
+      - type: Percent
+        value: 50
+        periodSeconds: 60  # Scale down by 50% every 60 sec
+      - type: Pods
+        value: 1
+        periodSeconds: 60
