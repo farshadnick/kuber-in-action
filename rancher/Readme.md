@@ -1,3 +1,8 @@
+# Install helm first 
+```
+snap install helm --classic
+
+```
 # install Certmanager
 
  If you have installed the CRDs manually, instead of setting `installCRDs` or `crds.enabled` to `true` in your Helm install command, you should upgrade your CRD resources before upgrading the Helm chart:
