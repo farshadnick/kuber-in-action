@@ -24,5 +24,6 @@ kubectl apply -f config.yml
 ```
 2- Deploy Kwatch 
 ```
-kubectl apply -f https://raw.githubusercontent.com/abahmed/kwatch/v0.8.4/deploy/deploy.yaml
+kubectl apply -f https://raw.githubusercontent.com/abahmed/kwatch/v0.10.1/deploy/deploy.yaml
+
 ```
