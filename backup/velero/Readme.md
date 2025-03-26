@@ -40,8 +40,8 @@ velero install \
     --bucket velero-backups \
     --secret-file ./credentials-velero \
     --backup-location-config region=minio,s3Url=http://192.168.7.253:9000,s3ForcePathStyle="true" \
-    --use-volume-snapshots=false \
-    --use-restic
+    --use-volume-snapshots=false 
+
 ```
 
 3- Take a backup
