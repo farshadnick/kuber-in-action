@@ -29,6 +29,9 @@ aws_secret_access_key=password
 EOF
 ```
 2- Install velero  
+```
+wget https://github.com/vmware-tanzu/velero/releases/download/v1.15.2/velero-v1.15.2-linux-amd64.tar.gz && tar xvf  velero-v1.15.2-linux-amd64.tar.gz && cd velero-v1.15.2-linux-amd64 && cp velero  /usr/local/bin/
+```
 it will bring up veleor pod 
 ```
 velero install \
