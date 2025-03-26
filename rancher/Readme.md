@@ -7,7 +7,7 @@ snap install helm --classic
 
  If you have installed the CRDs manually, instead of setting `installCRDs` or `crds.enabled` to `true` in your Helm install command, you should upgrade your CRD resources before upgrading the Helm chart:
 ```
-kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/<VERSION>/cert-manager.crds.yaml
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.12.16/cert-manager.crds.yaml
 ```
 # Add the Jetstack Helm repository
 ```
