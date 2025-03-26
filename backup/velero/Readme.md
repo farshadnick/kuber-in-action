@@ -59,6 +59,7 @@ velero restore create --from-backup BACKUP_NAME
 ![image](https://github.com/user-attachments/assets/ec243d9a-51db-4376-9870-8bf8d34af7bb)
 
 3-2 Schedule You backup
+This Velero backup schedule runs daily at 07:00 UTC. The schedule follows the cron format, where:
 ```
 velero schedule create backup --schedule "0 7 * * *"
 ```
