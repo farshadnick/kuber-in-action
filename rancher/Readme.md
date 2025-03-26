@@ -15,7 +15,7 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 ```
 helm repo add rancher-stable https://releases.rancher.com/server-charts/stable
 
-helm install rancher rancher-stable/rancher   --namespace cattle-system   --set bootstrapPassword=admin --set hostname=rancher.my.org
+helm install rancher rancher-stable/rancher   --namespace cattle-system   --set bootstrapPassword=admin --set hostname=rancher.my.org --create-namespace
 ```
 
 # change rancher svc to  nodeport 
