@@ -21,7 +21,7 @@ helm repo update
 helm install cert-manager jetstack/cert-manager \
   --namespace cert-manager \
   --create-namespace \
-  --set crds.enabled=false
+  --set crds.enabled=true
 ```
 # Install Rancher 
 ```
