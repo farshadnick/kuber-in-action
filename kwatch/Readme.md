@@ -16,8 +16,8 @@ data:
   config.yaml: |
     alert:
       telegram:
-        token: TOKEN
-        chatId: CHAT_ID
+        token: TOKEN #====> PUT IT IN DUBLE QOUTE
+        chatId: CHAT_ID  #====> PUT IT IN DUBLE QOUTE
 ```
 ```
 kubectl apply -f config.yml
