@@ -58,6 +58,10 @@ velero restore create --from-backup BACKUP_NAME
 ```
 ![image](https://github.com/user-attachments/assets/ec243d9a-51db-4376-9870-8bf8d34af7bb)
 
+3-2 Schedule You backup
+```
+velero schedule create backup --schedule "0 7 * * *"
+```
 
 
 
