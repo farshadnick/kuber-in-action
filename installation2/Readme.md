@@ -50,9 +50,8 @@ Paste the inventory format provided above and modify as per your setup.
 
 3. Run Kubespray Using Docker
 
-docker run --rm -it \
-  -v $PWD:/kubespray \
-  -v ~/.ssh:/root/.ssh \
-  -e ANSIBLE_CONFIG=/kubespray/ansible.cfg \
-  quay.io/kubespray/kubespray:v2.23.0 \
-  ansible-playbook -i /kubespray/inventory/mycluster/hosts.ini --become --become-user=root cluster.yml
+```
+docker run --rm -it --mount type=bind,source="$(pwd)"/inventory/sample,dst=/inventory \
+  --mount type=bind,source="${HOME}"/.ssh/id_rsa,dst=/root/.ssh/id_rsa \
+  quay.io/kubespray/kubespray:v2.27.0 bash
+```
