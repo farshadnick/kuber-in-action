@@ -1,9 +1,11 @@
 
-## 1- Create Imagepull secret with name regcred
+### 1- Create Imagepull secret with name regcred
 ```
+kubectl create secret docker-registry regcred   --docker-server=https://hub.zdevops.ir   --docker-username=admin   --docker-password=Harbor12345
 ```
-## 2- Create a Robobot account and make a variable in GitLab name DOCKER_PASSWORD
-## 3- Push Helm chart in harbor 
+### 2- Create a Robobot account and make a variable in GitLab name DOCKER_PASSWORD
+### 3- Create a another robot account for your helm repo on harbor in gitlab name PASSWORD_HELM 
+### 3- Push Helm chart in harbor 
 ```
 export CHART_VERSION=1.1.1
 git clone https://github.com/stakater/application.git
@@ -30,3 +32,5 @@ pull_policy = "if-not-present"
 ## 5- COPY KUBECONF in a variable in GitLab (as File variable) name KUBE_CONFIG
 ![image](https://github.com/user-attachments/assets/71366821-41ca-4a0b-b294-c04d456e9e45)
 
+
+PASSWORD_HELM 
