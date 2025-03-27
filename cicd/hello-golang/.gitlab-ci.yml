@@ -1,0 +1,17 @@
+services:
+  - docker:dind
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - echo '192.168.6.220 hub.zdevops.ir' >> /etc/hosts 
+    - echo $PASSWORD | docker login hub.zdevops.ir -u robot\$packops+rb --password-stdin
+    - echo $CI_COMMIT_SHORT_SHA
+    - docker build . -t hub.zdevops.ir/packops/hello-go-kuber:$CI_COMMIT_SHORT_SHA
+    - docker push hub.zdevops.ir/packops/hello-go-kuber:$CI_COMMIT_SHORT_SHA
+  tags:
+  - runner-packops
+
