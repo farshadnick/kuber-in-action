@@ -32,5 +32,4 @@ pull_policy = "if-not-present"
 ## 5- COPY KUBECONF in a variable in GitLab (as File variable) name KUBE_CONFIG
 ![image](https://github.com/user-attachments/assets/71366821-41ca-4a0b-b294-c04d456e9e45)
 
-
-PASSWORD_HELM 
+### 6- put values.yaml in root of project 
