@@ -1,7 +1,7 @@
 
-1- Create Imagepull secret with name regcred
-2- Create a Robobot account and make a variable in GitLab name DOCKER_PASSWORD
-2- Push Helm chart in harbor 
+# 1- Create Imagepull secret with name regcred
+# 2- Create a Robobot account and make a variable in GitLab name DOCKER_PASSWORD
+# 3- Push Helm chart in harbor 
 ```
 export CHART_VERSION=1.1.1
 git clone https://github.com/stakater/application.git
@@ -11,9 +11,8 @@ helm package --version ${CHART_VERSION} ./application
 helm push aoolication-${CHART_VERSION}.tgz oci://hub.zdevops.ir/YOUR_HELM_REPO
 ```
 
-4- Register Docker Executor in assign it to the group
-# 1- bring up runner and then register Your Runner 
-
+# 4- Register Docker Executor in assign it to the group
+  4-1- bring up runner and then register Your Runner 
 ```
 docker exec -it gitlab-runner-iman-gitlab-runner-1 bash
 sudo gitlab-runner register --url http://192.168.6.253/ --registration-token <YOUR_TOKEN>
