@@ -12,7 +12,7 @@ git clone https://github.com/stakater/application.git
 
 echo Harbor12345 | helm registry login -u USERNAME --password-stdin hub.zdevops.ir
 helm package --version ${CHART_VERSION} ./application
-helm push aoolication-${CHART_VERSION}.tgz oci://hub.zdevops.ir/YOUR_HELM_REPO
+helm push application-${CHART_VERSION}.tgz oci://hub.zdevops.ir/YOUR_HELM_REPO
 ```
 
 ## 4- Register Docker Executor in assign it to the group
