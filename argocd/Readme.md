@@ -17,8 +17,9 @@ kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath={.data.pass
 ```
 
 #image updater 
+```
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj-labs/argocd-image-updater/stable/manifests/install.yaml
-
+```
 This tutorial covers deploying a Go application (hello-go-kuber) using ArgoCD and Helm. It also demonstrates how to configure ArgoCD Image Updater for automatic image updates.
 
 Prerequisites
