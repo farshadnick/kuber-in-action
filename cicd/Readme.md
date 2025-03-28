@@ -10,7 +10,7 @@ kubectl create secret docker-registry regcred   --docker-server=https://hub.zdev
 export CHART_VERSION=1.1.1
 git clone https://github.com/stakater/application.git
 
-helm registry login -u USERNAME --password-stdin hub.zdevops.ir
+echo Harbor12345 | helm registry login -u USERNAME --password-stdin hub.zdevops.ir
 helm package --version ${CHART_VERSION} ./application
 helm push aoolication-${CHART_VERSION}.tgz oci://hub.zdevops.ir/YOUR_HELM_REPO
 ```
